@@ -39,7 +39,7 @@ public:
 
 	// getters
 
-	inline size_t getLength() {
+	inline size_t getLength() const {
 		return this->length;
 	}
 
