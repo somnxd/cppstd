@@ -17,7 +17,7 @@ public:
 template<typename T>
 class LinkedList {
 public:
-	// methods
+	// add items
 
 	void append(const T &item) noexcept {
 		this->length++;
@@ -37,9 +37,19 @@ public:
 		this->tail = node;
 	}
 
+	// remove items
+
+	void pop() noexcept {
+		this->length--;
+
+		this->tail = this->tail->prev;
+		delete this->tail->next;
+		this->tail->next = nullptr;
+	}
+
 	// getters
 
-	inline size_t getLength() const {
+	inline size_t getLength() const noexcept {
 		return this->length;
 	}
 
