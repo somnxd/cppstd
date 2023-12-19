@@ -22,7 +22,7 @@ public:
 	void append(const T &item) noexcept {
 		this->length++;
 
-		const Node<T> *node = new Node<T>(item);
+		Node<T> *const node = new Node<T>(item);
 
 		if (this->length == 0) {
 			this->head = node;
