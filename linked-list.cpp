@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include <cstddef>
@@ -60,4 +59,3 @@ private:
 	Node<T> *head = nullptr;
 	Node<T> *tail = nullptr;
 };
-
